@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- titulo del proyecto -->
+    <title>Proyecto 1</title>
+</head>
+<body>
+
+    <!-- generamos un div container para el encabezado de la pagina -->
+
+    <div class="container-fluid bg-secondary p-4 text-center text-white">
+    <h2>Codigo QR con JavaScript</h2>
+    <img src="img/img01.png" height="160px" class="rounded-circle border-light mt-3">
+</div>
+
+<!-- generamos varios div para el label,los botones,el container para el codigo qr -->
+
+<div class="container p-2">
+    <div class="mt-3 p-2">
+        <div class="row">
+            <div class="col-md-5">
+                <h5>Capture un texto</h5>
+                <hr>
+                <div class="form-floating">
+                    <input type="text" id="aqr" placeholder="" class="form-control">
+                        <label for="aqr">Texto a convertir</label>
+                </div>
+                <div class="mt-3 p-3">
+
+                    <button class="btn btn-outline-primary m-2" onclick="javascript:generar_qr();"><img src="img/iconoconvertir.png" height="35px"><br>Convertir !</button>
+                    <button class="btn btn-outline-danger m-2" onclick="javascript:limpiar();"><img src="img/iconolimpiar.png" height="35px"><br>Limpiar !</button>
+                    <br>
+                    <a href="javascript:convertir_sin_opc();">Convertir sin opciones</a>
+            </div>
+        </div>
+
+        <!-- modificamos el tamaño y organizamos el container donde va a estar el codigo qr -->
+
+        <div class="col-md-6 p-2 m-1 text-center border border-secondary">
+            <a id="lnk_desc" href="javascript:guardar_QR();" 
+            title="Clic para descargar la imagen"> 
+            <div class="icono_derecha">
+                  <img src="img/iconodescargar.png" height="30px">  
+            </div>
+        </a>
+    <div id="titulo" class="fs-5 text-start">
+        Texto en Codigo QR.
+    </div>
+        <hr>
+        <div id="cont_qr" class="p-2 justify-content-center align-items-center text-center border">
+             </div>
+          </div>
+        </div>
+
+     </div>
+</div>
+
+</body>
+
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/css.css" rel="stylesheet"/>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/davidshimjs-qrcodejs-04f46c6/qrcode.js"></script>
+<script src="js/funciones.js"></script>
+
+</html>
